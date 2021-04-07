@@ -2,10 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Stefan's Blog`,
     description: `This is a blog created with Gatsby!.`,
-    author: {
-      name: `Stefan Markovic`,
-      summary: `who builds things like this blog!`
-    }
+    author: `Stefan`
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -22,7 +19,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdowns`,
-        path: `${__dirname}/src/content/blog`,
+        path: `${__dirname}/content/blog`,
       },
     },
     `gatsby-transformer-remark`,
