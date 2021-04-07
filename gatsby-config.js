@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Stefan's Blog`,
+    title: `Blogger's Blog`,
     description: `This is a blog created with Gatsby!.`,
-    author: `Stefan`
+    author: `Blogger`
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -22,7 +22,19 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,

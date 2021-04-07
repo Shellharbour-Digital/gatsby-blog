@@ -19,7 +19,7 @@ export default ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div>
-      <h1>Stefan's Thoughts</h1>
+      <h1>Blogger's Thoughts</h1>
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
       {
         data.allMarkdownRemark.edges.map(({node}) => (
@@ -46,7 +46,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            date
+            date(formatString: "DD MMMM, YYYY")
             description
             title
           }
